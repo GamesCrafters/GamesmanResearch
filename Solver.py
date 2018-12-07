@@ -1,4 +1,7 @@
 
+def down_child(position):
+    return [do_move(position, m) for m in generate_moves(position)]
+
 def all_positions(initial_position):
     all_ps, old_all_ps, cur_positions = [initial_position], [], [initial_position]
     while all_ps != old_all_ps:
