@@ -3,6 +3,8 @@ from Cython.Build import cythonize
 import numpy
 
 setup(
-    ext_modules=cythonize("test_c.pyx"),
-    include_dirs=[numpy.get_include()]
+    ext_modules=[
+        Extension("test_c", ["test_c.c"],
+                  include_dirs=[numpy.get_include()]),
+    ],
 )
