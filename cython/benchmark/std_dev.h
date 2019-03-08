@@ -1,2 +1,2 @@
 #include <stdlib.h>
-double test(double *arr, size_t siz);
+double std_dev(double *arr, size_t siz);
