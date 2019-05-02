@@ -400,8 +400,8 @@ def numDraws(val):
 # Inputs: s = solved dictionary of format [position : value] from up_solve_draw_world_one_tier
 def isPure(s):
     for p in s.keys():
-        if len(p) >= 4 and p[-4:] == "LOSE":
-            children = child_solver(p)
+        if len(s[p]) >= 4 and s[p][-4:] == "LOSE":
+            children = child_solver(p, s)
             for c in children:
                 if len(c) >= 4 and c[-4:] == "LOSE":
                     return False
