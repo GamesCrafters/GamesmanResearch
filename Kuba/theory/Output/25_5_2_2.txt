@@ -1,0 +1,75 @@
+Kuba Tiered Count
+
+
+               R=1 W=1  B=1 Count=13800
+
+               R=1 W=1  B=2 Count=151800
+
+               R=1 W=1 Count=165600
+
+               R=1 W=2  B=1 Count=151800
+
+               R=1 W=2  B=2 Count=1593900
+
+               R=1 W=2 Count=1745700
+
+     R=1 Count=1911300
+
+               R=2 W=1  B=1 Count=151800
+
+               R=2 W=1  B=2 Count=1593900
+
+               R=2 W=1 Count=1745700
+
+               R=2 W=2  B=1 Count=1593900
+
+               R=2 W=2  B=2 Count=15939000
+
+               R=2 W=2 Count=17532900
+
+     R=2 Count=19278600
+
+               R=3 W=1  B=1 Count=1062600
+
+               R=3 W=1  B=2 Count=10626000
+
+               R=3 W=1 Count=11688600
+
+               R=3 W=2  B=1 Count=10626000
+
+               R=3 W=2  B=2 Count=100947000
+
+               R=3 W=2 Count=111573000
+
+     R=3 Count=123261600
+
+               R=4 W=1  B=1 Count=5313000
+
+               R=4 W=1  B=2 Count=50473500
+
+               R=4 W=1 Count=55786500
+
+               R=4 W=2  B=1 Count=50473500
+
+               R=4 W=2  B=2 Count=454261500
+
+               R=4 W=2 Count=504735000
+
+     R=4 Count=560521500
+
+               R=5 W=1  B=1 Count=20189400
+
+               R=5 W=1  B=2 Count=181704600
+
+               R=5 W=1 Count=201894000
+
+               R=5 W=2  B=1 Count=181704600
+
+               R=5 W=2  B=2 Count=1544489100
+
+               R=5 W=2 Count=1726193700
+
+     R=5 Count=1928087700
+
+BoardSize=25 Red=5 White=2 Black=2 TotalPositions=2633060700
+

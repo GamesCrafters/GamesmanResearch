@@ -1,0 +1,187 @@
+Kuba Tiered Count
+
+
+               R=1 W=1  B=1 Count=13800
+
+               R=1 W=1  B=2 Count=151800
+
+               R=1 W=1 Count=165600
+
+               R=1 W=2  B=1 Count=151800
+
+               R=1 W=2  B=2 Count=1593900
+
+               R=1 W=2 Count=1745700
+
+     R=1 Count=1911300
+
+               R=2 W=1  B=1 Count=151800
+
+               R=2 W=1  B=2 Count=1593900
+
+               R=2 W=1 Count=1745700
+
+               R=2 W=2  B=1 Count=1593900
+
+               R=2 W=2  B=2 Count=15939000
+
+               R=2 W=2 Count=17532900
+
+     R=2 Count=19278600
+
+               R=3 W=1  B=1 Count=1062600
+
+               R=3 W=1  B=2 Count=10626000
+
+               R=3 W=1 Count=11688600
+
+               R=3 W=2  B=1 Count=10626000
+
+               R=3 W=2  B=2 Count=100947000
+
+               R=3 W=2 Count=111573000
+
+     R=3 Count=123261600
+
+               R=4 W=1  B=1 Count=5313000
+
+               R=4 W=1  B=2 Count=50473500
+
+               R=4 W=1 Count=55786500
+
+               R=4 W=2  B=1 Count=50473500
+
+               R=4 W=2  B=2 Count=454261500
+
+               R=4 W=2 Count=504735000
+
+     R=4 Count=560521500
+
+               R=5 W=1  B=1 Count=20189400
+
+               R=5 W=1  B=2 Count=181704600
+
+               R=5 W=1 Count=201894000
+
+               R=5 W=2  B=1 Count=181704600
+
+               R=5 W=2  B=2 Count=1544489100
+
+               R=5 W=2 Count=1726193700
+
+     R=5 Count=1928087700
+
+               R=6 W=1  B=1 Count=60568200
+
+               R=6 W=1  B=2 Count=514829700
+
+               R=6 W=1 Count=575397900
+
+               R=6 W=2  B=1 Count=514829700
+
+               R=6 W=2  B=2 Count=4118637600
+
+               R=6 W=2 Count=4633467300
+
+     R=6 Count=5208865200
+
+               R=7 W=1  B=1 Count=147094200
+
+               R=7 W=1  B=2 Count=1176753600
+
+               R=7 W=1 Count=1323847800
+
+               R=7 W=2  B=1 Count=1176753600
+
+               R=7 W=2  B=2 Count=8825652000
+
+               R=7 W=2 Count=10002405600
+
+     R=7 Count=11326253400
+
+               R=8 W=1  B=1 Count=294188400
+
+               R=8 W=1  B=2 Count=2206413000
+
+               R=8 W=1 Count=2500601400
+
+               R=8 W=2  B=1 Count=2206413000
+
+               R=8 W=2  B=2 Count=15444891000
+
+               R=8 W=2 Count=17651304000
+
+     R=8 Count=20151905400
+
+               R=9 W=1  B=1 Count=490314000
+
+               R=9 W=1  B=2 Count=3432198000
+
+               R=9 W=1 Count=3922512000
+
+               R=9 W=2  B=1 Count=3432198000
+
+               R=9 W=2  B=2 Count=22309287000
+
+               R=9 W=2 Count=25741485000
+
+     R=9 Count=29663997000
+
+               R=10 W=1  B=1 Count=686439600
+
+               R=10 W=1  B=2 Count=4461857400
+
+               R=10 W=1 Count=5148297000
+
+               R=10 W=2  B=1 Count=4461857400
+
+               R=10 W=2  B=2 Count=26771144400
+
+               R=10 W=2 Count=31233001800
+
+     R=10 Count=36381298800
+
+               R=11 W=1  B=1 Count=811246800
+
+               R=11 W=1  B=2 Count=4867480800
+
+               R=11 W=1 Count=5678727600
+
+               R=11 W=2  B=1 Count=4867480800
+
+               R=11 W=2  B=2 Count=26771144400
+
+               R=11 W=2 Count=31638625200
+
+     R=11 Count=37317352800
+
+               R=12 W=1  B=1 Count=811246800
+
+               R=12 W=1  B=2 Count=4461857400
+
+               R=12 W=1 Count=5273104200
+
+               R=12 W=2  B=1 Count=4461857400
+
+               R=12 W=2  B=2 Count=22309287000
+
+               R=12 W=2 Count=26771144400
+
+     R=12 Count=32044248600
+
+               R=13 W=1  B=1 Count=686439600
+
+               R=13 W=1  B=2 Count=3432198000
+
+               R=13 W=1 Count=4118637600
+
+               R=13 W=2  B=1 Count=3432198000
+
+               R=13 W=2  B=2 Count=15444891000
+
+               R=13 W=2 Count=18877089000
+
+     R=13 Count=22995726600
+
+BoardSize=25 Red=13 White=2 Black=2 TotalPositions=197722708500
+
