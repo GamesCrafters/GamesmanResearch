@@ -1,26 +1,18 @@
-from DPSolver.PrimitiveValues import PrimitiveValues
+from PrimitiveValues import PrimitiveValues
+from TicTacToe import TicTacToe as TTT
+import time
 
 
 class MemoSolver:
 
-    def __init__(self, g, symmetries):
+    def __init__(self, g):
         self.game = g
         self.memo = {}
         self.primitiveCounter = [0, 0, 0, 0, 0, 0]
         self.counter = [0, 0, 0, 0, 0, 0]
-        self.sym = symmetries
 
     def solve(self, p, tief):
-        symmetries = []
-        if self.sym:
-            symmetries = [p, self.game.reflect(p)]
-            for i in range(3):
-                symmetries.append(self.game.rotate(symmetries[-2]))
-                symmetries.append(self.game.rotate(symmetries[-2]))
-            symmetries = list(set(symmetries).intersection(self.memo.keys()))
-        if len(symmetries) > 0:
-            v = self.memo[set(symmetries).intersection(self.memo.keys()).pop()]
-        elif not self.sym and p in self.memo:
+        if p in self.memo:
             v = self.memo[p]
         else:
             v = (self.game.primitive_value(p), 0)
@@ -43,20 +35,13 @@ class MemoSolver:
             self.counter[v[0].value] += 1
         return v
 
-    def analyze(self):
-        values = self.memo.values()
-        print("{:<8s}{:<8s}{:<8s}{:<8s}{:<8s}".format("Remote", "Win", "Lose", "Tie", "Total"))
-        print("-" * 37)
-        total_wins, total_losses, total_ties = 0, 0, 0
-        for i in range(max([v[1] for v in values]), -1, -1):
-            remote = [v[0] for v in values if v[1] == i]
-            wins = remote.count(PrimitiveValues.WIN)
-            total_wins += wins
-            ties = remote.count(PrimitiveValues.TIE)
-            total_ties += ties
-            losses = remote.count(PrimitiveValues.LOSE)
-            total_losses += losses
-            print("{:<8d}{:<8d}{:<8d}{:<8d}{:<8d}".format(i, wins, losses, ties, wins + ties + losses))
-        print("-" * 37)
-        print("{:<8s}{:<8d}{:<8d}{:<8d}{:<8d}".format("Total", total_wins, total_losses, total_ties,
-                                                      total_wins + total_losses + total_ties))
+
+times = []
+for _ in range(100):
+    game = TTT(3, 3, 3)
+    experiment = MemoSolver(game)
+    start = time.perf_counter()
+    experiment.solve(game.start, min)
+    end = time.perf_counter()
+    times.append(end - start)
+print("Average Time: ", sum(times) / len(times))

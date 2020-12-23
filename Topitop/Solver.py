@@ -1,4 +1,4 @@
-from Topitop.PrimitiveValues import PrimitiveValues
+from PrimitiveValues import PrimitiveValues
 
 
 class Solver:
