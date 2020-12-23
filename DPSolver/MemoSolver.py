@@ -1,10 +1,11 @@
-from Topitop.PrimitiveValues import PrimitiveValues
+from DPSolver.PrimitiveValues import PrimitiveValues
 
 
-class Solver:
+class MemoSolver:
 
     def __init__(self, g, symmetries):
         self.game = g
+        self.memo = {}
         self.primitiveCounter = [0, 0, 0, 0, 0, 0]
         self.counter = [0, 0, 0, 0, 0, 0]
         self.sym = symmetries
