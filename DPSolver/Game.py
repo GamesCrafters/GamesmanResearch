@@ -14,3 +14,6 @@ class Game:
 
     def hash(self, p):
         raise NotImplementedError()
+
+    def unhash(self, h):
+        raise NotImplementedError()

@@ -20,9 +20,23 @@ class TicTacToe(Game):
             self.winX += "X"
             self.winO += "O"
         self.biases = []
-        for i in range(self.size // 2):
-            self.biases.append(self.rearranger(i, i))
-            self.biases.append(self.rearranger(i + 1, i))
+        for i in range(self.size // 2 + 1):
+            self.biases.append(rearranger(i, i, self.size))
+            if i * 2 < self.size:
+                self.biases.append(rearranger(i + 1, i, self.size))
+        self.hash_indeces = ["" for _ in range(sum(self.biases))]
+        self.hash_memo = {}
+        self.counter = 0
+        self.generate_hash(self.start)
+
+    def generate_hash(self, p):
+        h = self.hash(p, True)
+        if self.hash_indeces[h] == "":
+            self.counter += 1
+            self.hash_indeces[h] = p
+            children = [self.do_move(p, m) for m in self.generate_moves(p)]
+            for c in children:
+                self.generate_hash(c)
 
     def do_move(self, p, m):
         return p[:m[1]] + m[0] + p[m[1] + 1:]
@@ -91,14 +105,39 @@ class TicTacToe(Game):
             matrix[i] = matrix[i][::-1]
         return self.convert2Dto1D(matrix)
 
-    def hash(self, p):
+    def hash(self, p, memo):
+        if memo and p in self.hash_memo:
+            return self.hash_memo[p]
         x, o = 0, 0
         for i in range(len(p)):
             if p[i] == "X":
                 x += 1
             elif p[i] == "O":
                 o += 1
-        return self.rearranger(x, o)
+        value = 0
+        for i in range(x + o):
+            value += self.biases[i]
+        spaces = self.size
+        for i in range(self.size):
+            if x == spaces or o == spaces:
+                break
+            spaces -= 1
+            if p[i] == "X":
+                if spaces >= x + o:
+                    value += rearranger(x, o, spaces)
+                if o >= 1:
+                    value += rearranger(x, o - 1, spaces)
+                x -= 1
+            elif p[i] == "O":
+                if spaces >= x + o:
+                    value += rearranger(x, o, spaces)
+                o -= 1
+        self.hash_memo[p] = value
+        return value
 
-    def rearranger(self, x, o):
-        return math.factorial(self.size) / math.factorial(x) / math.factorial(o) / math.factorial(self.size - x - o)
+    def unhash(self, h):
+        return self.hash_indeces[h]
+
+
+def rearranger(x, o, size):
+    return int(math.factorial(size) / math.factorial(x) / math.factorial(o) / math.factorial(size - x - o))

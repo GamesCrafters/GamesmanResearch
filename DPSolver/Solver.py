@@ -32,7 +32,7 @@ class Solver:
 
 
 times = []
-for _ in range(100):
+for _ in range(10):
     game = TTT(3, 3, 3)
     experiment = Solver(game)
     start = time.perf_counter()
